@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Sun, Droplet, Thermometer, Leaf } from "lucide-react";
 
 const plantCareData: Record<
@@ -75,14 +76,22 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 text-white flex flex-col items-center py-16 px-6">
-      <h1 className="text-4xl font-extrabold mb-10 text-green-400 tracking-wide drop-shadow-lg">
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-4xl font-extrabold mb-10 text-green-400 tracking-wide drop-shadow-lg"
+      >
         🌿 Plant Care Assistant
-      </h1>
+      </motion.h1>
 
       {/* Dropdown */}
-      <select
+      <motion.select
         value={selectedPlant}
         onChange={(e) => setSelectedPlant(e.target.value)}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
         className="mb-8 px-5 py-3 rounded-xl bg-gray-800 text-gray-200 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200"
       >
         <option value="">Select your plant</option>
@@ -91,18 +100,31 @@ export default function App() {
             {p}
           </option>
         ))}
-      </select>
+      </motion.select>
 
       {selectedPlant && (
-        <div className="w-full max-w-2xl bg-gray-900/70 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-gray-700 transition duration-300 hover:shadow-green-500/20">
-          <h2 className="text-3xl font-semibold text-green-300 mb-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="w-full max-w-2xl bg-gray-900/70 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-gray-700"
+        >
+          <motion.h2
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl font-semibold text-green-300 mb-6 text-center"
+          >
             {plantCareData[selectedPlant].name}
-          </h2>
+          </motion.h2>
 
           <div className="grid gap-6">
             {plantCareData[selectedPlant].sections.map((section, idx) => (
-              <div
+              <motion.div
                 key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.15 + 0.3, duration: 0.5 }}
                 className="flex items-start gap-4 border-b border-gray-800 pb-4 last:border-none"
               >
                 <div className="p-3 bg-gray-800 rounded-xl shadow-inner">
@@ -116,10 +138,10 @@ export default function App() {
                     {section.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       )}
     </div>
   );
