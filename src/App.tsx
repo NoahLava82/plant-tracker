@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 const plantInstructions: Record<string, string> = {
-  "Christmas Tree": "...",
-  "Money Tree": "...",
-  Bonsai: "...",
+  "Christmas Tree": "Watering Schedule: ...",
+  "Money Tree": "Watering Schedule: ...",
+  Bonsai: "Watering Schedule: ...",
 };
 
 const defaultPlants = Object.keys(plantInstructions);
