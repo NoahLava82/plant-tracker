@@ -9,61 +9,86 @@ const plantCareData: Record<
     sections: { icon: JSX.Element; title: string; description: string }[];
   }
 > = {
-  "Aloe Vera": {
-    name: "Aloe Vera Care Guide",
+  "Christmas Tree": {
+    name: "Christmas Tree Guide",
     sections: [
       {
-        icon: <Sun className="w-6 h-6 text-yellow-400" />,
+        icon: <Sun className="w-6 h-6 text-yellow-400 yellow" />,
         title: "Light",
-        description:
-          "Place in bright, indirect sunlight. Aloe Vera enjoys warmth but avoid prolonged direct afternoon rays.",
+        description: "6-8 hours in full sun daily.",
       },
       {
         icon: <Droplet className="w-6 h-6 text-blue-400" />,
         title: "Water",
         description:
-          "Water once every 2–3 weeks. Ensure the soil dries completely between waterings. Avoid standing water.",
+          "Water every 3-5 days (Tuesday and Saturday). Water until the water drains from the bottom of the pot.",
       },
       {
         icon: <Thermometer className="w-6 h-6 text-red-400" />,
         title: "Temperature",
-        description:
-          "Prefers 60–75°F (15–24°C). Keep away from cold drafts or sudden temperature drops.",
+        description: "Good in Centreville keep away from 15F or below.",
       },
       {
         icon: <Leaf className="w-6 h-6 text-green-400" />,
         title: "Fertilizer",
-        description:
-          "Feed sparingly — once in spring with diluted balanced fertilizer is enough.",
+        description: "Fertilize in Spring and Fall with a balanced fertilizer.",
       },
     ],
   },
-  "Snake Plant": {
-    name: "Snake Plant Care Guide",
+  "Money Tree": {
+    name: "Money Tree Care Guide0",
     sections: [
       {
         icon: <Sun className="w-6 h-6 text-yellow-400" />,
         title: "Light",
         description:
-          "Tolerates low light but thrives in moderate to bright, indirect light.",
+          "Bright, indirect sunlight is best for a healthy money tree. It's good as long as the areas don't receive too much direct sunlight. Your plant may adjust to lower lights (although too little light will slow growth and cause the leaves to turn yellow), but direct sunlight will quickly scorch the leaves.",
       },
       {
         icon: <Droplet className="w-6 h-6 text-blue-400" />,
         title: "Water",
         description:
-          "Water every 2–4 weeks. Less frequent in winter. Allow soil to fully dry between watering.",
+          "Do not over-water. Water your money plant once every one to two weeks, or when the soil volume is 50 to 75% dry. The plant will likely need water more frequently during spring and summer months. Be sure that your planter has drainage holes, so the roots aren't sitting in excess water.",
       },
       {
         icon: <Thermometer className="w-6 h-6 text-red-400" />,
         title: "Temperature",
         description:
-          "Ideal range is 65–85°F (18–29°C). Avoid exposure below 50°F (10°C).",
+          "Your money tree will grow best in a space that's between 60º and 75º Fahrenheit. Keep your plant away from heat and air conditioning vents, as well as any drafty windows or doors.",
+      },
+      {
+        icon: <Leaf className="w-6 h-6 text-green-400" />,
+        title: "Fertilizer",
+        description: "Fertilize during Spring and Summer",
+      },
+    ],
+  },
+  "Bonsai Plant": {
+    name: "Bonsai Plant Care Guide",
+    sections: [
+      {
+        icon: <Sun className="w-6 h-6 text-yellow-400" />,
+        title: "Light",
+        description:
+          "The Ficus Ginseng likes a light position out of the full sun, but plenty of sunlight. Place this houseplant in a sunny spot, filtered with a thin curtain or blinds.",
+      },
+      {
+        icon: <Droplet className="w-6 h-6 text-blue-400" />,
+        title: "Water",
+        description:
+          "Water your Ginseng Ficus thoroughly whenever the soil gets slightly dry. It will tolerate some periods of over or underwatering, but prefers moist soil that is not saturated. Do not allow the roots to sit in water.",
+      },
+      {
+        icon: <Thermometer className="w-6 h-6 text-red-400" />,
+        title: "Temperature",
+        description:
+          "The Chinese Banyan prefers temperatures of 60⁰F to 75⁰F. It does not like temperatures below 60⁰F or drafty areas.",
       },
       {
         icon: <Leaf className="w-6 h-6 text-green-400" />,
         title: "Fertilizer",
         description:
-          "Feed once a month in spring and summer with a mild houseplant fertilizer.",
+          "Fertilize your Ficus bonsai once every two weeks during the growing season, spring until fall.",
       },
     ],
   },
