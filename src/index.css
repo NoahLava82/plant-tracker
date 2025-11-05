@@ -1,0 +1,81 @@
+/* Import Tailwind preflight (replaces base) */
+@import "tailwindcss/preflight";
+
+/* Tailwind utilities */
+@tailwind utilities;
+
+/* Custom dark mode styling */
+body {
+  background-color: #1a1a1a; /* bg-gray-900 equivalent */
+  color: #fff; /* text-white equivalent */
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+
+input,
+select,
+textarea {
+  background-color: #2d2d2d; /* bg-gray-800 */
+  color: #fff;
+  border: 1px solid #3f3f3f; /* border-gray-700 */
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #a0a0a0; /* placeholder-gray-400 */
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 0 2px #22c55e; /* focus:ring-green-500 */
+}
+
+button {
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+li {
+  background-color: #2d2d2d;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+}
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(59, 130, 246, 0.5); /* Tailwind blue-500 */
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  animation: ripple 0.6s ease-out;
+}
