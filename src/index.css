@@ -6,7 +6,8 @@
 body {
   background-color: #1a1a1a; /* bg-gray-900 equivalent */
   color: #fff; /* text-white equivalent */
-  font-family: sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   min-height: 100vh;
 }
 
