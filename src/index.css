@@ -1,8 +1,6 @@
 /* Import Tailwind preflight (replaces base) */
 @import "tailwindcss/preflight";
-
-/* Tailwind utilities */
-@tailwind utilities;
+@import "tailwindcss/utilities";
 
 /* Custom dark mode styling */
 body {
